@@ -1,5 +1,6 @@
 /**
  * 基于windows10系统测试
+ * node-dir chokidar
  */
 var fs = require('fs');  
 var util = require('util');
