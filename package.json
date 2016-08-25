@@ -1,0 +1,20 @@
+{
+  "name": "FileSync",
+  "version": "1.0.0",
+  "description": "Never too late to make a toy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lgh06/FileSync.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lgh06/FileSync/issues"
+  },
+  "homepage": "https://github.com/lgh06/FileSync#readme"
+}
