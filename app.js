@@ -4,9 +4,9 @@
 var fs = require('fs');  
 var util = require('util');
 var show = (obj)=>{
-    if (arguments.length == 1){
-        console.log(util.inspect(obj).toString())
-    }
+
+    console.log(util.inspect(obj).toString())
+
 } 
 /**
  * https://npm.taobao.org/mirrors/node/latest-v4.x/docs/api/fs.html#fs_fs_readfile_file_options_callback
@@ -30,22 +30,24 @@ fs.readdir(__dirname+'/../',(err,files)=>{
 /**
  * https://npm.taobao.org/mirrors/node/latest-v4.x/docs/api/fs.html#fs_class_fs_stats
  * 列出文件或目录信息
+ * lstat可以处理链接文件 stat会显示链接文件所链接到的原始文件信息
  */
 //判断是文件或者目录
-fs.stat(__dirname,(err,stats)=>{
-    //show(stats) //包含文件大小、创建时间、修改时间等信息
+fs.lstat(__dirname,(err,stats)=>{
+    show(stats) //包含文件大小、创建时间、修改时间等信息
     //show(stats.isFile())
     //show(stats.isDirectory())
 })
 
 /**
  * https://npm.taobao.org/mirrors/node/latest-v4.x/docs/api/fs.html#fs_fs_watch_filename_options_listener
+ * 也可使用第三方watcher https://npm.taobao.org/package/chokidar
  * 文件改变时触发
  */
 
 fs.watch(
     __dirname,
-    {recursive:true}, //recursive option can be used in max and windows
+    {recursive:true}, //recursive option can be used in Mac and Windows
     (event,filename)=>{
         console.log(`event is: ${event}`); //rename可能是添加删除文件   change可能是文件改变 也可能是添加删除文件时触发
         if (filename) {
