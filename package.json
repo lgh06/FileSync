@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/lgh06/FileSync/issues"
   },
-  "homepage": "https://github.com/lgh06/FileSync#readme"
+  "homepage": "https://github.com/lgh06/FileSync#readme",
+  "dependencies": {
+    "chokidar": "^1.6.0",
+    "node-dir": "^0.1.16"
+  }
 }
