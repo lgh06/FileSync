@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/lgh06/FileSync#readme",
   "dependencies": {
+    "ali-oss": "^4.4.4",
     "chokidar": "^1.6.0",
+    "co": "^4.6.0",
     "moment": "^2.14.1",
     "node-dir": "^0.1.16"
   }
