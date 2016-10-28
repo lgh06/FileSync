@@ -1,6 +1,6 @@
 {
   "name": "FileSync",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Never too late to make a toy.",
   "main": "index.js",
   "scripts": {
